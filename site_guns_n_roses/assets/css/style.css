@@ -1,21 +1,37 @@
 @font-face {
     font-family: Guns n Roses;
-    src: url("fonte\ guns\ n\ roses.ttf") format("truetype"); /*Fonte usada pelo Guns N' Roses baixada da internet*/
+    src: url("fonte\ guns\ n\ roses.ttf") format("truetype");
+    /*Fonte usada pelo Guns N' Roses baixada da internet*/
 }
 
-@keyframes animacao { /*Funcionalidade muito legal*/
-    from {color: white}
-    to {color: yellow}
+:root {
+    --fundo: black;
+    --texto: white;
+    --link: yellow;
+    --fundo-th: #222222;
+    --fundo-caixa: #111111;
+    --borda-caixa: #222222;
 }
 
-html, body {
+.claro:root {
+    --fundo: white;
+    --texto: black;
+    --link: darkgoldenrod;
+    --fundo-th: #eaecf0;
+    --fundo-caixa: #eeeeee;
+    --borda-caixa: #dddddd;
+}
+
+html,
+body {
     width: 100%;
     min-width: 620px;
 }
 
 body {
-    background-color: black; /*Modo escuro*/
-    color: white;
+    background-color: var(--fundo);
+    /*Modo escuro*/
+    color: var(--texto);
     font: normal 20pt Guns n Roses;
     padding: 0;
     margin: 0;
@@ -38,20 +54,21 @@ p {
     text-align: justify;
 }
 
-a:visited, a:link, a:active {
-    color: white;
+a:visited,
+a:link,
+a:active {
+    color: var(--texto);
     text-decoration: none;
+    transition: all .6s ease;
 }
 
 a:hover {
-    color: yellow;
+    color: var(--link);
     text-decoration: underline;
-    animation-name: animacao;
-    animation-duration: 0.6s;
 }
 
 th {
-    background-color: #222222;
+    background-color: var(--fundo-th);
 }
 
 abbr {
@@ -59,7 +76,7 @@ abbr {
 }
 
 header {
-    background-color: black;
+    background-color: var(--fundo);
     position: sticky;
     top: 0px;
     z-index: 1;
@@ -90,8 +107,8 @@ footer {
 
 .caixa {
     text-align: center;
-    background-color: #111111;
-    border: 5px solid #222222;
+    background-color: var(--fundo-caixa);
+    border: 5px solid var(--borda-caixa);
     border-radius: 25px;
     font-size: 15pt;
     width: 30%;
