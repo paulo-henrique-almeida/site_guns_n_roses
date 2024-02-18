@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Discografia</title>
-        <link rel="stylesheet" href="../style.css">
+        <link rel="stylesheet" href="../css/style.css">
         <link rel="shortcut icon" href="../imagens/icones/favicon.ico" type="image/x-icon">
         <style>
             div {
@@ -21,18 +21,22 @@
             }
             th {
                 font-size: 30pt;
-                background-color: black;
+                background-color: var(--fundo);
             }
         </style>
     </head>
     <body>
+
         <header>
-            <a href="../index.html"><img src="../imagens/icones/guns n roses.png" alt="logo Guns n' Roses" height="101px" width="153px"></a> <!--Logo da banda que volta para a página inicial-->
-            <a href="../index.html"><h1>Guns N' Roses</h1></a>
-            <a href="../claro/paginas/discografia.html" class="direita" style="font-size: 20pt;">Modo claro</a> <!--Opção para deixar a página em modo claro--> <br>
-            <hr>
+            <div class="wrapper">
+                <a href="../../index.html"><img src="../imagens/icones/guns n roses.png" alt="logo Guns n' Roses" height="101px" width="153px"></a> <!--Logo da banda que volta para a página inicial-->
+                <a href="../../index.html"><h1>Guns N' Roses</h1></a>
+                <a href="#" id="btn-modo" style="font-size: 20pt;">Mudar tema</a> <!--Opção para mudar o tema--> <br>
+            </div>
         </header>
+
         <h2 style="font-size: 40pt;">Discografia</h2> <br>
+
         <div>
             <table>
                 <tr>
@@ -64,6 +68,7 @@
                 </tr>
             </table>
         </div>
+
         <div>
             <table>
                 <tr>
@@ -75,6 +80,7 @@
                 </tr>
             </table>
         </div>
+
         <div>
             <table>
                 <tr>
@@ -90,6 +96,7 @@
                 </tr>
             </table>
         </div>
+
         <div>
             <table>
                 <tr>
@@ -101,6 +108,7 @@
                 </tr>
             </table>
         </div>
+
         <div>
             <table>
                 <tr>
@@ -120,6 +128,10 @@
                 </tr>
             </table>
         </div>
+
         Fonte: <a href="https://en.wikipedia.org/wiki/Guns_N%27_Roses_discography" target="_blank">Wikipedia</a>
+
+        <script src="../js/index.js"></script> <!-- javascript -->
     </body>
+
 </html>

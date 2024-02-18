@@ -1,6 +1,6 @@
 @font-face {
     font-family: Guns n Roses;
-    src: url("fonte\ guns\ n\ roses.ttf") format("truetype");
+    src: url('../fontes/fonte\ guns\ n\ roses.ttf') format("truetype");
     /*Fonte usada pelo Guns N' Roses baixada da internet*/
 }
 
@@ -11,6 +11,8 @@
     --fundo-th: #222222;
     --fundo-caixa: #111111;
     --borda-caixa: #222222;
+    --verde: darkgreen;
+    --vermelho: darkred;
 }
 
 .claro:root {
@@ -20,28 +22,42 @@
     --fundo-th: #eaecf0;
     --fundo-caixa: #eeeeee;
     --borda-caixa: #dddddd;
+    --verde: #ddffdd;
+    --vermelho: #ffdddd;
 }
 
 html,
 body {
     width: 100%;
     min-width: 620px;
-}
-
-body {
-    background-color: var(--fundo);
-    /*Modo escuro*/
-    color: var(--texto);
-    font: normal 20pt Guns n Roses;
     padding: 0;
     margin: 0;
 }
 
-h1 {
-    position: absolute;
+body {
+    background-color: var(--fundo);
+    color: var(--texto);
+    font: normal 20pt Guns n Roses;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: var(--fundo);
+    border-bottom: 3px solid var(--texto);
+    position: sticky;
     top: 0px;
-    right: 40%;
-    left: 40%;
+    z-index: 1;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 70%;
+}
+
+h1 {
     font: normal 50pt Guns n Roses;
     white-space: nowrap;
 }
@@ -54,9 +70,7 @@ p {
     text-align: justify;
 }
 
-a:visited,
-a:link,
-a:active {
+a {
     color: var(--texto);
     text-decoration: none;
     transition: all .6s ease;
@@ -75,25 +89,14 @@ abbr {
     text-decoration: none;
 }
 
-header {
-    background-color: var(--fundo);
-    position: sticky;
-    top: 0px;
-    z-index: 1;
-}
-
 footer {
     text-align: center;
     position: absolute;
     bottom: 0px;
     width: 100%;
     min-width: 650px;
-}
-
-.direita {
-    position: absolute;
-    right: 0px;
-    padding: 15px;
+    border-top: 1px solid var(--texto);
+    padding-top: 20px;
 }
 
 .imagem {
@@ -101,8 +104,8 @@ footer {
 }
 
 .icone {
-    width: 16px;
     height: 16px;
+    width: auto;
 }
 
 .caixa {
@@ -119,4 +122,12 @@ footer {
 .textocaixa {
     display: inline;
     width: 60%;
+}
+
+.verde {
+    background-color: var(--verde);
+}
+
+.vermelho {
+    background-color: var(--vermelho);
 }
